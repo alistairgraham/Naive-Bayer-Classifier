@@ -1,1 +1,1 @@
-"# Naive Bayer Classifier" 
+# Naive Bayer Classifier
