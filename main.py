@@ -72,12 +72,20 @@ def calculateProbability(email, probabilityTable, classNum):
 
     return probability
 
+def outputFeatureProbabilities(probTable):
+    spamFeatureProb = []
+    for i in range(0, len(probTable)-1):
+        spamFeatureProb.append(probTable[i][1])
+    print(spamFeatureProb)
+    return
+
 
 def main():
     trainingList, falseCount, trueCount = loadData("resources/"+sys.argv[1])
     probabilityTable = computeProbalityTable(trainingList)
     testList,x, y = loadData("resources/"+sys.argv[2])
     predictedList = classifyUnlabelled(testList, probabilityTable)
+    outputFeatureProbabilities(probabilityTable)
     print(predictedList)
     return
 

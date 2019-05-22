@@ -1,0 +1,5 @@
+Output from predicting the class of the unlabelled emails:
+[0, 1, 1, 0, 0, 1, 0, 0, 1, 0]
+
+Key:
+0 = not spam, 1 = spam
